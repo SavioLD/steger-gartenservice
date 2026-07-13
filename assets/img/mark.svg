@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Baum-Signet">
+  <path d="M32 37v21" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M32 53c-3.5-1.7-6.2-4.4-7.6-7.9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 49c3.1-1.5 5.6-3.8 7-6.7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 5.5c8.4 0 14.7 5.9 14.7 13.7 0 2.2-.6 4.2-1.6 5.9 3.1 1.4 5.2 4.3 5.2 7.7 0 4.9-4.1 8.6-9.3 8.6H24.3c-5.2 0-9.3-3.7-9.3-8.6 0-3.4 2.1-6.3 5.2-7.7a11.9 11.9 0 0 1-1.6-5.9C18.6 11.4 24.9 5.5 32 5.5Z" fill="currentColor"/>
+  <circle cx="32" cy="20" r="3.1" fill="#ffffff" fill-opacity=".22"/>
+</svg>
