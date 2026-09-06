@@ -81,6 +81,37 @@
     });
   });
 
+  /* ---- Web3Forms submission (sends inquiry by e-mail) ---- */
+  document.querySelectorAll('form[data-web3]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var ok = form.querySelector('.form__ok');
+      var err = form.querySelector('.form__err');
+      var btn = form.querySelector('button[type=submit]');
+      if (ok) ok.classList.remove('show');
+      if (err) err.classList.remove('show');
+      if (btn) { btn.disabled = true; btn.dataset.html = btn.innerHTML; btn.textContent = 'Wird gesendet …'; }
+      var endpoint = form.getAttribute('action') || 'https://api.web3forms.com/submit';
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && data.success) {
+            if (ok) { ok.classList.add('show'); ok.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+            form.reset();
+          } else if (err) { err.classList.add('show'); }
+        })
+        .catch(function () { if (err) err.classList.add('show'); })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.innerHTML = btn.dataset.html; }
+        });
+    });
+  });
+
   /* ---- File input label ---- */
   document.querySelectorAll('.filedrop input[type=file]').forEach(function (input) {
     input.addEventListener('change', function () {
