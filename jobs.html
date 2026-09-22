@@ -109,10 +109,19 @@
       <h2 class="h2">In wenigen Schritten bewerben</h2>
       <p class="lead">Fülle einfach das Formular aus – wir melden uns schnellstmöglich bei dir. Felder mit <span style="color:#c0492b">*</span> sind Pflichtfelder.</p>
     </div>
-    <form class="form" data-demo novalidate data-reveal>
+    <form class="form" data-web3 novalidate data-reveal action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Access Key (Empfänger: info@gartenservice-steger.de) -->
+      <input type="hidden" name="access_key" value="8571729a-8af7-490c-a6da-745c637d9543">
+      <input type="hidden" name="subject" value="Neue Bewerbung über gartenservice-steger.de">
+      <input type="hidden" name="from_name" value="Website – Bewerbungsformular">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="form__ok">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><path d="M20 6 9 17l-5-5"/></svg>
-        Danke für deine Bewerbung! Dies ist eine Demo – es wurden keine Daten übermittelt.
+        Danke für deine Bewerbung! Wir melden uns schnellstmöglich bei dir.
+      </div>
+      <div class="form__err">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        Das Senden hat leider nicht geklappt. Bitte melde dich per E-Mail: info@gartenservice-steger.de.
       </div>
       <div class="form__grid">
         <div class="field">
@@ -163,8 +172,8 @@
     </form>
 
     <p class="text-center" style="margin-top:1.8rem;color:var(--muted)">
-      Lieber direkt? Schreib an
-      <a href="mailto:a.steger@gartenservice-steger.de" style="color:var(--forest-600);font-weight:600">a.steger@gartenservice-steger.de</a>
+      Lieber direkt? Schick deine Unterlagen (Lebenslauf, Zeugnisse) an
+      <a href="mailto:info@gartenservice-steger.de" style="color:var(--forest-600);font-weight:600">info@gartenservice-steger.de</a>
       oder ruf an: <a href="tel:+491752434843" style="color:var(--forest-600);font-weight:600">0175 2434843</a>
     </p>
   </div>
