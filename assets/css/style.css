@@ -158,6 +158,10 @@ body.nav-open .nav-backdrop{opacity:1;visibility:visible}
 .media__tag{position:absolute;top:.9rem;left:.9rem;z-index:3;font-size:.68rem;font-weight:600;letter-spacing:.1em;
   text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(255,255,255,.16);
   backdrop-filter:blur(4px);padding:.32rem .6rem;border-radius:100px}
+.media__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;display:block}
+.media--photo{background:#0a1f07}
+.media--photo::before{display:none}
+.media--photo .media__label{z-index:3}
 .media--leaf{background:linear-gradient(150deg,var(--forest-500),var(--forest-800))}
 .media--bark{background:linear-gradient(150deg,var(--bark-2),var(--bark))}
 .media--sky{background:linear-gradient(150deg,#5c9dc4,#2f6a94 55%,var(--forest-800))}
