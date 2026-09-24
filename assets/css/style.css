@@ -282,12 +282,16 @@ body.nav-open .nav-backdrop{opacity:1;visibility:visible}
 .parklist li svg{width:22px;height:22px;color:var(--lime);flex-shrink:0}
 
 /* ---------- Gallery / Referenzen ---------- */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
-.gallery .g{border-radius:var(--radius-sm)}
-.gallery .g.tall{grid-row:span 2}
-.gallery .g.wide{grid-column:span 2}
-@media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.gallery{grid-template-columns:1fr;grid-auto-rows:190px}.gallery .g.wide{grid-column:span 1}}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.8vw,24px)}
+.gallery .g{aspect-ratio:4/3;border-radius:var(--radius);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.gallery .g:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.gallery .media__label{opacity:0;transform:translateY(10px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
+.gallery .g:hover .media__label{opacity:1;transform:none}
+@media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}}
+/* subtle zoom on photo tiles */
+.media--photo .media__img{transition:transform .6s var(--ease)}
+.gallery .g:hover .media__img,.tile:hover .media__img,.scard:hover .media__img{transform:scale(1.06)}
 
 /* ---------- CTA band ---------- */
 .cta-band{position:relative;overflow:hidden;border-radius:var(--radius-lg);
