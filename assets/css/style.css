@@ -511,3 +511,8 @@ figure.media{margin:0}
 
 /* consistent spacing between section headings and the following text */
 h2.h2 + p, h3.h3 + p{margin-top:1.1rem}
+
+/* photo heroes: lighter on the right so the photo shows, dark enough behind the text */
+.hero--photo .hero__scrim{background:
+  linear-gradient(100deg,rgba(9,26,5,.88) 0%,rgba(9,26,5,.62) 42%,rgba(9,26,5,.24) 74%,rgba(9,26,5,.1) 100%),
+  linear-gradient(180deg,rgba(6,18,3,.6) 0%,rgba(6,18,3,0) 26%,rgba(6,18,3,0) 72%,rgba(6,18,3,.45) 100%)}
