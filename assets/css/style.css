@@ -158,6 +158,9 @@ body.nav-open .nav-backdrop{opacity:1;visibility:visible}
 .media__tag{position:absolute;top:.9rem;left:.9rem;z-index:3;font-size:.68rem;font-weight:600;letter-spacing:.1em;
   text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(255,255,255,.16);
   backdrop-filter:blur(4px);padding:.32rem .6rem;border-radius:100px}
+/* before/after collage labels (image split at 50%) */
+.media__tag--ba{color:#fff;background:rgba(6,20,4,.5)}
+.media__tag--after{left:calc(50% + .9rem)}
 .media__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;display:block}
 .media--photo{background:#0a1f07}
 .media--photo::before{display:none}
