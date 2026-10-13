@@ -38,8 +38,13 @@
 <main id="main">
 
 <!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero__bg"></div>
+<section class="hero hero--photo">
+  <div class="hero__bg hero__slides" aria-hidden="true">
+    <img class="hero__img" src="assets/img/photos/hero-baumfaellung-kletterer.jpg" alt="" fetchpriority="high" decoding="async">
+    <img class="hero__img" src="assets/img/photos/hero-mulchraupe-abendrot.jpg" alt="" decoding="async">
+    <img class="hero__img" src="assets/img/photos/hero-kranfaellung-winter.jpg" alt="" decoding="async">
+    <img class="hero__img" src="assets/img/photos/hero-hofeinfahrt.jpg" alt="" decoding="async">
+  </div>
   <div class="hero__scrim"></div>
   <div class="container hero__inner" data-reveal>
     <span class="hero__eyebrow">Forst · Garten · Landschaft</span>
@@ -56,6 +61,7 @@
       <div class="stat"><b>100%</b><span>Leidenschaft fürs Draußen</span></div>
     </div>
   </div>
+  <div class="hero__dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
 </section>
 
 <!-- ============ LEIDENSCHAFT / INTRO ============ -->
@@ -75,7 +81,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="split__media" data-reveal>
-        <figure class="media media--photo ratio-4x3"><img class="media__img" src="assets/cf076274-c339-43d3-aa7c-c10ffa2aadff.JPG" alt="Das Team von Steger bei der Arbeit" loading="lazy" decoding="async"><span class="media__label">Aus Leidenschaft fürs Draußen</span></figure>
+        <figure class="media media--photo ratio-4x3"><img class="media__img" src="assets/img/photos/leidenschaft-team.jpg" alt="Das Team von Steger bei der Arbeit" loading="lazy" decoding="async"><span class="media__label">Aus Leidenschaft fürs Draußen</span></figure>
       </div>
     </div>
   </div>
@@ -121,7 +127,7 @@
       </div>
       <div class="split__media" data-reveal>
         <figure class="media media--photo ratio-4x3">
-          <img class="media__img" src="assets/IMG_7485.JPG" alt="Andreas und Patrick Steger vor ihren Maschinen" loading="lazy" decoding="async">
+          <img class="media__img" src="assets/img/photos/ueber-uns-team.jpg" alt="Andreas und Patrick Steger vor ihren Maschinen" loading="lazy" decoding="async">
         </figure>
       </div>
     </div>
@@ -131,23 +137,18 @@
 <!-- ============ FUHRPARK ============ -->
 <section class="section section--forest anchor" id="fuhrpark">
   <div class="container">
-    <div class="split">
-      <div class="split__media" data-reveal>
-        <figure class="media media--photo ratio-4x3"><img class="media__img" src="assets/IMG_8792.JPG" alt="Der Maschinenpark von Steger" loading="lazy" decoding="async"><span class="media__label">Unser Maschinenpark</span></figure>
-      </div>
-      <div data-reveal>
-        <p class="eyebrow">Unser Fuhrpark</p>
-        <h2 class="h2">Für jede Aufgabe die richtige Technik</h2>
-        <p style="color:#d6e6c8">Unser moderner und spezialisierter Maschinenpark ist exakt auf unsere Projekte abgestimmt – so können wir jede Arbeit präzise, zuverlässig und termingerecht ausführen.</p>
-        <ul class="parklist">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Funkferngesteuerte Mulchraupe</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Wurzelstockfräsen</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Kompaktlader</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Häcksler</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Bagger</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> und viele weitere</li>
-        </ul>
-      </div>
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Unser Fuhrpark</p>
+      <h2 class="h2">Für jede Aufgabe die richtige Technik</h2>
+      <p style="color:#d6e6c8;font-size:1.1rem;margin-top:1.1rem">Unser moderner und spezialisierter Maschinenpark ist exakt auf unsere Projekte abgestimmt – so können wir jede Arbeit präzise, zuverlässig und termingerecht ausführen.</p>
+    </div>
+    <div class="machines">
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-mulchraupe.jpg" alt="Funkferngesteuerte Mulchraupe von Steger" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Funkferngesteuerte Mulchraupe</span></figure>
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-wurzelstockfraese.jpg" alt="Wurzelstockfräse von Steger" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Wurzelstockfräsen</span></figure>
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-kompaktlader.jpg" alt="Kompaktlader mit Greifer beim Abtransport eines Stamms" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Kompaktlader</span></figure>
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-haecksler.jpg" alt="Häcksler von Steger" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Häcksler</span></figure>
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-bagger.jpg" alt="Mobilbagger auf der Baustelle" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bagger</span></figure>
+      <figure class="media media--photo machine" data-reveal><img class="media__img" src="assets/img/photos/fuhrpark-maschinenhalle.jpg" alt="Die Maschinenhalle von Steger" loading="lazy" decoding="async"><span class="media__label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>und viele weitere</span></figure>
     </div>
   </div>
 </section>
@@ -162,7 +163,7 @@
     </div>
     <div class="grid grid-3">
       <a class="scard" href="leistungen.html#baumarbeiten" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/2cc8acee-e166-44d6-a37b-c052df20b00e.JPG" alt="Baumfällung an der Straße" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-baumarbeiten.jpg" alt="Baumfällung mit Kompaktlader und Greifer" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Baumarbeiten</h3>
           <p>Baumfällung, Baumschnitt &amp; Rodung – wir bringen jeden Baum sicher zu Fall.</p>
@@ -170,7 +171,7 @@
         </div>
       </a>
       <a class="scard" href="leistungen.html#mulchen" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/IMG_4017.JPG" alt="Mulchraupe auf der Wiese" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-mulchen.jpg" alt="Mulcharbeiten auf einer verwilderten Wiese" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Mulchen &amp; Rodung</h3>
           <p>Funkferngesteuerte Mulchraupe mit 60 PS – verwilderte Flächen, Hänge und Wildschäden.</p>
@@ -178,7 +179,7 @@
         </div>
       </a>
       <a class="scard" href="leistungen.html#wurzelstock" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/IMG_8458.JPG" alt="Wurzelstockfräse im Einsatz" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-wurzelstock.jpg" alt="Wurzelstockfräse im Einsatz" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Wurzelstockentfernung</h3>
           <p>Zwei leistungsstarke Wurzelstockfräsen – bodenschonend und nur 89 cm breit.</p>
@@ -186,7 +187,7 @@
         </div>
       </a>
       <a class="scard" href="leistungen.html#gartenpflege" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/IMG_8459.JPG" alt="Rasenpflege im Garten" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-gartenpflege.jpg" alt="Mäharbeiten auf einer Streuobstwiese" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Garten- &amp; Landschaftspflege</h3>
           <p>Rasen- und Baumpflege, Form­schnitt, Mäharbeiten, Teich-, Dach- und Pflanzarbeiten.</p>
@@ -194,7 +195,7 @@
         </div>
       </a>
       <a class="scard" href="leistungen.html#landschaftsbau" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/IMG_7008.JPG" alt="Neu verlegte Natursteinfläche" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-landschaftsbau.jpg" alt="Neu gepflasterter Weg am Haus" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Garten- &amp; Landschaftsbau</h3>
           <p>Bagger- und Belagsarbeiten, Mauerbau, Fundamente, Treppen und Dachbegrünung.</p>
@@ -202,7 +203,7 @@
         </div>
       </a>
       <a class="scard" href="leistungen.html#baumpflege" data-reveal>
-        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/IMG_4149.JPG" alt="Baumpfleger in der Krone" loading="lazy" decoding="async"></figure>
+        <figure class="media media--photo ratio-3x2"><img class="media__img" src="assets/img/photos/home-baumpflege.jpg" alt="Baumpflege in der Krone" loading="lazy" decoding="async"></figure>
         <div class="scard__body">
           <h3>Baumpflege</h3>
           <p>Umfassende und sachkundige Maßnahmen, damit Ihre Bäume gesund und verkehrssicher bleiben.</p>
@@ -226,12 +227,15 @@
       <p class="lead">Von der Problembaumfällung mitten im Ort bis zum neu angelegten Garten – ein Auszug aus unserer täglichen Arbeit.</p>
     </div>
     <div class="gallery" data-reveal>
-      <figure class="media media--photo g"><img class="media__img" src="assets/c1303ec5-e7ce-4769-977d-d892b487b06d.JPG" alt="Baumfällung in großer Höhe" loading="lazy" decoding="async"><span class="media__label">Baumfällung</span></figure>
-      <figure class="media media--photo g"><img class="media__img" src="assets/IMG_3992.JPG" alt="Funkferngesteuerte Mulchraupe im Einsatz" loading="lazy" decoding="async"><span class="media__label">Mulchraupe</span></figure>
-      <figure class="media media--photo g"><img class="media__img" src="assets/IMG_7008.JPG" alt="Neu verlegte Natursteinfläche" loading="lazy" decoding="async"><span class="media__label">Belagsarbeiten</span></figure>
-      <figure class="media media--photo g"><img class="media__img" src="assets/IMG_8461.JPG" alt="Wurzelstockentfernung im Garten" loading="lazy" decoding="async"><span class="media__label">Wurzelstockentfernung</span></figure>
-      <figure class="media media--photo g"><img class="media__img" src="assets/IMG_7007.JPG" alt="Natursteinmauer mit Treppe" loading="lazy" decoding="async"><span class="media__label">Mauer- &amp; Treppenbau</span></figure>
-      <figure class="media media--photo g"><img class="media__img" src="assets/IMG_5534.JPG" alt="Kranfällung mit Blick über den Ort" loading="lazy" decoding="async"><span class="media__label">Kranfällung</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-kletterer-nadelbaum.jpg" alt="Baumfällung per Klettertechnik im Garten" loading="lazy" decoding="async"><span class="media__label">Baumfällung</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-natursteinterrasse.jpg" alt="Neu verlegte Natursteinterrasse" loading="lazy" decoding="async"><span class="media__label">Natursteinterrasse</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-mulchen-nacht.jpg" alt="Mulcharbeiten in der Abenddämmerung" loading="lazy" decoding="async"><span class="media__label">Mulcharbeiten</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-kran-strasse.jpg" alt="Kranfällung an der Ortsdurchfahrt" loading="lazy" decoding="async"><span class="media__label">Kranfällung</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-wurzelstock-garten.jpg" alt="Wurzelstockentfernung im Garten" loading="lazy" decoding="async"><span class="media__label">Wurzelstockentfernung</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-terrasse-pflaster.jpg" alt="Neu gepflasterte Terrasse" loading="lazy" decoding="async"><span class="media__label">Pflasterarbeiten</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-kranfaellung-winter.jpg" alt="Kranfällung im Winter" loading="lazy" decoding="async"><span class="media__label">Kranfällung im Winter</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-natursteinweg.jpg" alt="Neu angelegter Natursteinweg" loading="lazy" decoding="async"><span class="media__label">Wegebau</span></figure>
+      <figure class="media media--photo g"><img class="media__img" src="assets/img/photos/ref-kran-haecksler.jpg" alt="Baumarbeiten mit Hubsteiger und Häcksler" loading="lazy" decoding="async"><span class="media__label">Hubsteiger &amp; Häcksler</span></figure>
     </div>
     <div class="text-center" style="margin-top:2.4rem" data-reveal>
       <a class="btn btn--outline btn--lg" href="https://www.instagram.com/" target="_blank" rel="noopener">
@@ -244,7 +248,9 @@
 <!-- ============ CTA ============ -->
 <section class="section section--cream">
   <div class="container">
-    <div class="cta-band" data-reveal>
+    <div class="cta-band cta-band--photo" data-reveal>
+      <img class="cta-band__img" src="assets/img/photos/bg-cta-home.jpg" alt="" loading="lazy" decoding="async">
+      <div class="cta-band__shade"></div>
       <h2>Bereit für Ihr Projekt?</h2>
       <p>Ob Baumfällung, Gartenpflege oder Landschaftsbau – rufen Sie uns an oder schreiben Sie uns. Wir beraten Sie gerne unverbindlich.</p>
       <div class="hero__actions">

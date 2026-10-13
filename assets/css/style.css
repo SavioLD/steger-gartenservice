@@ -392,3 +392,100 @@ body.nav-open .nav-backdrop{opacity:1;visibility:visible}
 .badge-row{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;align-items:center}
 .trust{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-weight:500;font-size:.95rem}
 .trust svg{width:22px;height:22px;color:var(--forest-500)}
+
+/* =========================================================
+   Photo system – full-bleed heroes, slideshow, photo bands
+   ========================================================= */
+/* header: logo shrinks once the page is scrolled */
+.brand__logo{transition:height .35s var(--ease)}
+.header.scrolled .brand__logo{height:68px}
+@media(max-width:520px){.header.scrolled .brand__logo{height:54px}}
+.subnav{top:88px}
+@media(max-width:520px){.subnav{top:74px}}
+.anchor{scroll-margin-top:160px}
+
+/* hero with photograph */
+.hero__inner{padding-block:10.5rem 4.5rem}
+.hero--sub{min-height:min(70vh,620px)}
+.hero--sub .hero__inner{padding-block:10rem 3.5rem}
+.hero--photo .hero__bg{background:var(--forest-950);overflow:hidden}
+.hero--photo .hero__bg::after{display:none}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.hero--photo .hero__img{animation:heroZoom 16s ease-out both}
+@keyframes heroZoom{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero--photo .hero__scrim{background:
+  linear-gradient(100deg,rgba(9,26,5,.9) 0%,rgba(9,26,5,.7) 40%,rgba(9,26,5,.32) 75%,rgba(9,26,5,.22) 100%),
+  linear-gradient(180deg,rgba(6,18,3,.62) 0%,rgba(6,18,3,0) 28%,rgba(6,18,3,0) 70%,rgba(6,18,3,.55) 100%)}
+
+/* home: cross-fading slideshow with slow zoom */
+.hero__slides .hero__img{opacity:0;animation:heroSlide 28s infinite}
+.hero__slides .hero__img:nth-child(1){animation-delay:-1.5s}
+.hero__slides .hero__img:nth-child(2){animation-delay:5.5s}
+.hero__slides .hero__img:nth-child(3){animation-delay:12.5s}
+.hero__slides .hero__img:nth-child(4){animation-delay:19.5s}
+@keyframes heroSlide{0%{opacity:0;transform:scale(1.1)}5%{opacity:1}25%{opacity:1}30%{opacity:0;transform:scale(1)}100%{opacity:0;transform:scale(1)}}
+.hero__dots{position:absolute;z-index:2;bottom:2rem;right:max(20px,calc((100vw - var(--container))/2 + 40px));display:flex;gap:.5rem}
+.hero__dots span{position:relative;width:38px;height:3px;border-radius:3px;background:rgba(255,255,255,.28);overflow:hidden}
+.hero__dots span::after{content:"";position:absolute;inset:0;background:var(--lime);transform:scaleX(0);transform-origin:left;animation:heroDot 28s infinite linear}
+.hero__dots span:nth-child(1)::after{animation-delay:-1.5s}
+.hero__dots span:nth-child(2)::after{animation-delay:5.5s}
+.hero__dots span:nth-child(3)::after{animation-delay:12.5s}
+.hero__dots span:nth-child(4)::after{animation-delay:19.5s}
+@keyframes heroDot{0%{transform:scaleX(0)}25%{transform:scaleX(1)}25.1%,100%{transform:scaleX(0)}}
+@media(max-width:600px){.hero__dots{right:auto;left:clamp(20px,5vw,40px);bottom:1.4rem}}
+
+/* CTA band with photo */
+.cta-band--photo{background:var(--forest-900)}
+.cta-band__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;transition:transform 1.4s var(--ease)}
+.cta-band__shade{position:absolute;inset:0;z-index:-2;
+  background:linear-gradient(115deg,rgba(13,38,7,.94) 0%,rgba(22,62,13,.82) 50%,rgba(39,98,24,.55) 100%)}
+.cta-band--photo:hover .cta-band__img{transform:scale(1.04)}
+.cta-band--photo::after{opacity:.25}
+
+/* full-width section with photo background */
+.section--photo{isolation:isolate;overflow:hidden}
+.section__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.section__shade{position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,33,6,.95) 0%,rgba(15,43,9,.86) 50%,rgba(11,33,6,.95) 100%)}
+
+/* Fuhrpark: machine photo grid */
+.machines{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,26px);margin-top:clamp(8px,1vw,12px)}
+@media(max-width:860px){.machines{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.machines{grid-template-columns:1fr}}
+.machine{aspect-ratio:4/3;margin:0;box-shadow:0 26px 50px -26px rgba(0,0,0,.75)}
+.machine .media__label{display:flex;align-items:center;gap:.55rem;padding:2.2rem 1.2rem 1rem;font-size:1.05rem;
+  background:linear-gradient(to top,rgba(6,20,4,.85),transparent)}
+.machine .media__label svg{width:20px;height:20px;color:var(--lime);flex-shrink:0}
+.machine:hover .media__img{transform:scale(1.06)}
+
+/* photo tiles: consistent frames */
+figure.media{margin:0}
+.tile .media{aspect-ratio:4/3}
+.tile:hover .tile__cap{color:var(--forest-600)}
+.tile__cap{transition:color .3s var(--ease)}
+
+/* additional services without photo, shown as chips */
+.extras{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem;margin-top:clamp(26px,3.5vw,40px)}
+.extras__label{font-weight:600;color:var(--muted);margin-right:.2rem}
+.extras .chip{display:inline-flex;align-items:center;gap:.45rem;background:#fff;font-weight:600;padding:.6rem 1.1rem}
+.extras .chip svg{width:16px;height:16px;color:var(--forest-500)}
+
+/* gallery captions always visible on touch devices */
+@media(hover:none){.gallery .media__label{opacity:1;transform:none}}
+
+@media(prefers-reduced-motion:reduce){
+  .hero--photo .hero__img,.hero__slides .hero__img{animation:none;transform:none}
+  .hero__slides .hero__img{opacity:0}
+  .hero__slides .hero__img:first-child{opacity:1}
+  .hero__dots{display:none}
+}
+
+/* card link: keep on one line, arrow at text size */
+.scard__more{white-space:nowrap}
+.scard__more svg{width:1.1em;height:1.1em;flex-shrink:0;transition:transform .3s var(--ease)}
+.scard:hover .scard__more svg{transform:translateX(4px)}
+
+/* mobile: image frames next to text must not force a minimum width */
+.split > *{min-width:0}
+@media(max-width:860px){.split__media .media{min-height:0;height:auto}}
+@media(max-width:480px){.btn{white-space:normal;text-align:center;justify-content:center;line-height:1.25}.btn--lg{padding:1rem 1.4rem}}
