@@ -489,3 +489,9 @@ figure.media{margin:0}
 .split > *{min-width:0}
 @media(max-width:860px){.split__media .media{min-height:0;height:auto}}
 @media(max-width:480px){.btn{white-space:normal;text-align:center;justify-content:center;line-height:1.25}.btn--lg{padding:1rem 1.4rem}}
+
+/* white cards inside dark sections keep dark headings */
+.section--forest .scard h3,.section--forest .value h3{color:var(--forest-950)}
+/* photo backgrounds: explicit offsets (older browsers without `inset`) + lighter shade */
+.hero__img,.cta-band__img,.cta-band__shade,.section__bg,.section__shade,.media__img{top:0;right:0;bottom:0;left:0}
+.section__shade{background:linear-gradient(180deg,rgba(11,33,6,.9) 0%,rgba(15,43,9,.74) 50%,rgba(11,33,6,.9) 100%)}
