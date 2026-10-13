@@ -234,7 +234,7 @@ body.nav-open .nav-backdrop{opacity:1;visibility:visible}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5.5vw,82px);align-items:center}
 .split--reverse .split__media{order:2}
 @media(max-width:860px){.split{grid-template-columns:1fr;gap:34px}.split--reverse .split__media{order:0}}
-.split__media .media{height:100%;min-height:340px}
+.split__media .media{width:100%;height:auto;min-height:0}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 1.4rem}
 .chip{font-size:.85rem;font-weight:500;color:var(--forest-800);background:var(--sand);
   padding:.4rem .85rem;border-radius:100px;border:1px solid var(--line)}
@@ -495,3 +495,19 @@ figure.media{margin:0}
 /* photo backgrounds: explicit offsets (older browsers without `inset`) + lighter shade */
 .hero__img,.cta-band__img,.cta-band__shade,.section__bg,.section__shade,.media__img{top:0;right:0;bottom:0;left:0}
 .section__shade{background:linear-gradient(180deg,rgba(11,33,6,.9) 0%,rgba(15,43,9,.74) 50%,rgba(11,33,6,.9) 100%)}
+
+/* ---- photo tiles: one clean card (no inner shadow, equal height) ---- */
+.grid > .tile{display:flex;flex-direction:column;height:100%;background:#fff;
+  border:1px solid var(--line);box-shadow:0 1px 2px rgba(20,40,12,.04)}
+.tile .media{box-shadow:none;border-radius:0}
+.tile__cap{flex:1;display:flex;align-items:center;justify-content:center;border:0;
+  min-height:3.6rem;padding:.9rem 1rem;line-height:1.35;font-size:1rem}
+.tile:hover{border-color:transparent}
+/* service / step cards: same clean frame */
+.scard .media{box-shadow:none}
+.grid > .scard{height:100%}
+/* photo CTA bands: slightly stronger shade for crisp text */
+.cta-band__shade{background:linear-gradient(115deg,rgba(13,38,7,.95) 0%,rgba(22,62,13,.86) 52%,rgba(39,98,24,.66) 100%)}
+
+/* consistent spacing between section headings and the following text */
+h2.h2 + p, h3.h3 + p{margin-top:1.1rem}
